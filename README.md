@@ -27,7 +27,7 @@ The only formula you'll need is [Newton's law of universal gravitation](https://
 
 Each particle's color is interpolated from blue to yellow based on its velocity magnitude. As you can see, the most intense gravitational interaction is observed at the center of the particle cluster.
 
-To make a demonstration clearer, I removed a blur. 
+To make a demonstration clearer, I disabled a blur effect. 
 
 ![](img/no-blur-demo.gif)
 
