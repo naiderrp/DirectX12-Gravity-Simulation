@@ -822,9 +822,7 @@ private:
             CD3DX12_GPU_DESCRIPTOR_HANDLE srvHandle(SRV_UAVheap_->GetGPUDescriptorHandleForHeapStart(), srvIndex, SRV_UAVdescriptor_size_);
             command_list_->SetGraphicsRootDescriptorTable(graphics_SRVtable, srvHandle);
 
-            PIXBeginEvent(command_list_.Get(), 0, L"Draw particles for thread %u", n);
             command_list_->DrawInstanced(particle_count_, 1, 0, 0);
-            PIXEndEvent(command_list_.Get());
         }
 
         command_list_->RSSetViewports(1, &viewport_);
@@ -852,9 +850,7 @@ private:
             ThrowIfFailed(pCommandList->Close());
             ID3D12CommandList* ppCommandLists[] = { pCommandList };
 
-            PIXBeginEvent(pCommandQueue, 0, L"Thread %d: Iterate on the particle simulation", thread_index);
             pCommandQueue->ExecuteCommandLists(1, ppCommandLists);
-            PIXEndEvent(pCommandQueue);
 
             // wait for the compute shader to complete the simulation
             uint64_t threadFenceValue = InterlockedIncrement(&thread_fence_values_[thread_index]);
