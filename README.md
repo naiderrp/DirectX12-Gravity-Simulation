@@ -7,19 +7,19 @@ DirectX 12 Real-Time Gravity Simulation
 
 ## Introduction
 
-The best way to learn compute pipelines is to create a simulation. And the best model to follow is [the Microsoft DirectX Graphics Samples](https://github.com/microsoft/DirectX-Graphics-Samples/tree/master).
+The best way to learn compute pipelines is to create a simulation. And the best model to follow is the [Microsoft DirectX Graphics Samples](https://github.com/microsoft/DirectX-Graphics-Samples/tree/master).
 
-Any simulation can be implemented using either a particle-based or a grid-based approach. The former involves storing an array of particles and tracking their velocity and position individually. (Refer to my [previous project](https://github.com/naiderrp/Vulkan-Fluid-Simulation), I explained this model in more details.) On the other hand, the grid-based approach entails working with sampled images, that is considered a more advanced grpahics programming technique. The implemented simulation focuses on the first approach, which I found to be easier for those who are getting started with DirectX compute shaders.
+Any simulation can be implemented using either a particle-based or a grid-based approach. The former involves storing an array of particles and tracking their velocity and position individually. (Refer to my [previous project](https://github.com/naiderrp/Vulkan-Fluid-Simulation), I explained this model in more details.) On the other hand, the grid-based approach entails working with sampled images, that is considered a more advanced graphics programming technique. The implemented simulation focuses on the first approach, which I found to be easier for those who are getting started with DirectX compute shaders.
 
 ## Environment
 
 * Intel Integrated UHD Graphics 620
 * Windows 10
-* Visual Studio
+* Visual Studio 2022
 
-## Physics background
+## Physics Background
 
-The only formula you'll need is [Newton's law of universal gravitation](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation)! What is more, the notation taught in school would be enough. No derivatives, integrals, or complex equations. It's simple yet incredibly elegant!
+The only formula you'll need is [Newton's law of universal gravitation](https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation). What is more, the notation taught in school would be enough. No derivatives, integrals, or complex equations. It's simple yet incredibly elegant!
 
 ![](img/looking-around.gif)
 
